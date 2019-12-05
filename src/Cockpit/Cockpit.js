@@ -9,7 +9,17 @@ const cockpit = (props) => {
       setTimeout(() => {
         alert('Salvo dado na nuvem!');
       }, 1000);
+      return() => {
+        console.log('[Cockpit.js] cleanup trabalha no useEffect');
+      }
     }, []);
+
+    useEffect(() => {
+      console.log('[Cockpit.js] 2º useEffect');
+      return () => {
+        console.log('[Cockpit.js] cleanup trabalha no 2º useEffect')
+      };
+    });
 
     const classesAssinaladas = [];
     let botaoClasse = '';

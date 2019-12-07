@@ -24,7 +24,7 @@ const cockpit = (props) => {
     const classesAssinaladas = [];
     let botaoClasse = '';
     if (props.mostrarPessoas) {
-        botaoClasse = classes.vermelho;
+      botaoClasse = classes.vermelho;
     }
     
     if (props.pessoas.length <= 2) {
